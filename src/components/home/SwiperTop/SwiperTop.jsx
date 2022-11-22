@@ -1,7 +1,7 @@
 import React from "react";
 import { Space, Swiper } from "antd-mobile";
 import "./SwiperTop.scss";
-import { getBanner } from "../../api/home";
+import { getBanner } from "../../../api/home";
 
 class SwiperTop extends React.Component {
   state = {
@@ -16,7 +16,7 @@ class SwiperTop extends React.Component {
   }
 
   render() {
-    console.log(this.state.banners);
+    // console.log(this.state.banners);
     const items = this.state.banners.map((banner, index) => (
       <Swiper.Item key={index}>
         <div className="swiperTop">

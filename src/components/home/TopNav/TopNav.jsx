@@ -2,6 +2,8 @@ import React from "react";
 import { ReactComponent as SearchIcon } from "../../../assets/icons/search.svg";
 import { ReactComponent as ListIcon } from "../../../assets/icons/list.svg";
 import "./TopNav.scss";
+import { Link} from "react-router-dom";
+
 
 class TopNav extends React.Component {
   render() {
@@ -19,7 +21,9 @@ class TopNav extends React.Component {
         </div>
 
         <div className="topRight">
+        <Link to={`search`} >
           <SearchIcon />
+          </Link>
         </div>
       </div>
     );
