@@ -21,3 +21,12 @@ export function getMusicLyric(data) {
   return get(`/lyric?id=${data}`)
 }
 
+//Login
+
+export function login(phone, captcha) {
+ return get(`/login/cellphone?phone=${phone}&captcha=${captcha}`)
+}
+
+export function getCode(phone) {
+ return get(`/captcha/sent?phone=${phone}`)
+}

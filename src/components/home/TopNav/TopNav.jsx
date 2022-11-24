@@ -14,7 +14,10 @@ class TopNav extends React.Component {
         </div>
 
         <div className="topContent">
-          <span>我的</span>
+        <Link to={`login`} >
+        <span>我的</span>
+          </Link>
+          
           <span className="active">发现</span>
           <span>云村</span>
           <span>视频</span>

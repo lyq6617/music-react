@@ -52,6 +52,7 @@ class Footer extends React.Component {
     play: undefined,
     Musiclyric: "", //歌词
     currentTime: 0,
+    isLogin: false, //判断是否登录（开始未登录）
   };
 
   interVal = undefined;
@@ -71,9 +72,12 @@ class Footer extends React.Component {
     // console.log(this.audio.current);
     // console.log(this.audio);
     this.context.updateStore({
+      ...this.context.store,
       updatePlayList: this.updatePlayList,
       updatePlayListIndex: this.updatePlayListIndex,
       pushPlayList: this.pushPlayList,
+      updateIsLogin: this.updateIsLogin,
+      updateIsLogin: this.updateIsLogin,
       // play:this.play,
       playList: this.state.playList,
     });
@@ -166,6 +170,12 @@ class Footer extends React.Component {
   updatePlay = (value) => {
     this.setState({
       play: value,
+    });
+  };
+
+  updateIsLogin = (value) => {
+    this.setState({
+      isLogin: value,
     });
   };
 
